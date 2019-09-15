@@ -47,7 +47,7 @@ pipeline {
   			echo 'I will say Hello again'
 
   			emailext body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}",
-                recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
+                recipientProviders: [[$class: 'rajendra.r2t@gmail.com'], [$class: 'rajendrachowdary40@gmail.com']],
                 subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
   		}
   	}
