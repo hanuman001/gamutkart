@@ -42,6 +42,7 @@ pipeline {
   			echo "ok"
   		}
   	}
+  }	
   	post {
   		always {
   			echo 'I will say Hello again'
@@ -51,14 +52,6 @@ pipeline {
                 subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
   		}
   	}
-   }
-  stages{
-  	stage('Deploy'){
-  		steps{
-  			bat 'del "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\gamutkart.war " && xcopy "C:\\Program Files (x86)\\Jenkins\\workspace\\gamutkart_master@script\\target\\gamutkart.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"'
-
-  		}
-  	}	
-  
-   }  
+   
+    
 }
