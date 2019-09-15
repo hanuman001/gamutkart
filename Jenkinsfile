@@ -4,7 +4,7 @@ pipeline {
         doError = '1'
     }
 	agent any 
-  satges {
+  stages{
   	stage('Clone'){
   		steps{
   			git url: 'https://github.com/Rajendra333/gamutkart.git'
